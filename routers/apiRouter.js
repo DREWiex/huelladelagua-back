@@ -1,5 +1,5 @@
 const express=require('express');
-const { getFullData, saveQuestionnaire, deleteQuiz } = require('../controllers/apiControllers');
+const { getFullData, saveQuestionnaire, deleteQuiz, getFeedBack } = require('../controllers/apiControllers');
 const {check} =require('express-validator')
 const {validarInputs} = require('../middleware/inputValidate')
 const router=express.Router();
@@ -25,6 +25,8 @@ router.post('/saveQuestionnaire',[
     check('quiz14', 'Falta el quiz14').not().isEmpty(),
     check('quiz15', 'Falta el quiz15').not().isEmpty(),
 validarInputs], saveQuestionnaire)
+
+router.post('/feedbackdata', getFeedBack)
 
 router.delete('/deleteone/:id', deleteQuiz)
 

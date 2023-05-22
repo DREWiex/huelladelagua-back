@@ -34,3 +34,7 @@ Documentación de postman:
 ***
 Podéis ver la documentación de las funciones con js-doc en el siguiente enlace:
 >https://drewiex.github.io/huelladelagua-back/
+
+3.75.158.163
+3.125.183.140
+35.157.117.28

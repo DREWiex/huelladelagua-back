@@ -87,8 +87,9 @@ const getFullData = async (req, res) => {
  * @throws {Error} - Error al guardar el cuestionario en la base de datos.
  */
 const saveQuestionnaire = async (req, res) => {
+    console.log('entro')
     const nuevoQuestionario = new Questionnaire(req.body)
-
+    console.log(req.body)
     try {
 
         const newQuestionnaireData = await nuevoQuestionario.save()
@@ -140,9 +141,42 @@ const deleteQuiz = async (req, res) => {
     }
   }
 
+const getFeedBack = async (req,res) => {
+
+    try {
+        const petition = await fetch('http://18.219.249.163/api/k-means/prediction?data=2&data=0&data=1&data=0&data=0&data=0&data=0&data=1&data=0&data=0&data=1&data=1&data=0&data=0&data=1&data=1&data=0');
+        const resp = await petition.json()
+        
+        if (resp) {
+
+          res.status(201).json({
+            ok:true,
+            data: resp
+        })  
+
+        } else {
+
+        res.status(500).json({
+        ok: false,
+        msg: 'Error al obtener los datos'
+      });
+        }
+        
+    } catch (error) {
+        
+        console.log(error)
+        res.status(500).json({
+            ok: false,
+            msg: 'Error al obtener los datos.',
+            error
+          });
+    }
+}
+
 module.exports = {
     getFullData,
     saveQuestionnaire,
-    deleteQuiz
+    deleteQuiz,
+    getFeedBack
 }
 
