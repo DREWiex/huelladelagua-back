@@ -21,8 +21,16 @@ Y para finalizar, deberemos iniciar el proyecto con el comando
 ***
 
 # Endpoints
+Documentación de postman: 
+>https://documenter.getpostman.com/view/26092514/2s93m33P8T
+
+
 - GET http://localhost:3000/api/v1/getfulldata : Recoge los datos de todos los formularios guardados.
 
 - POST http://localhost:3000/api/v1/saveQuestionnaire : Guarda un questionario, con un objeto con las quiz del 1 al 15. ejemplo: ```"quiz1":"Menor de 18 años"```.
 
 -DELETE http://localhost:3000/api/v1/deleteone/:id : Borra un questionario mandando por parámetros el ObjectId de Mongo.
+
+***
+Podéis ver la documentación de las funciones con js-doc en el siguiente enlace:
+>https://drewiex.github.io/huelladelagua-back/
