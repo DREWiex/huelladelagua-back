@@ -1,4 +1,7 @@
-
+/**
+ * Función que devuelve un agregado de mongoDB para recibir todos los resultados de un campo.
+ * @returns {Promise<Array>} - El agregado.
+ */
 const quizAgr = (num) => {
     return [
         {
