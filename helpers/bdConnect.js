@@ -13,6 +13,7 @@ const conexion=async()=>{
         return respuesta
         
     } catch (error) {
+        console.log(error)
         return {
             ok:false,
             msg:'Error al conectar con la base de datos'
