@@ -29,7 +29,11 @@ Documentación de postman:
 
 - POST http://localhost:3000/api/v1/saveQuestionnaire : Guarda un questionario, con un objeto con las quiz del 1 al 15. ejemplo: ```"quiz1":"Menor de 18 años"```.
 
--DELETE http://localhost:3000/api/v1/deleteone/:id : Borra un questionario mandando por parámetros el ObjectId de Mongo.
+- POST http://localhost:3000/api/v1/emailandsub : Guarda el email de un cliente interesado en el producto y una posible suscripción a próximas novedades. ejemplo: ```"email":"yo@gmail.com", "suscription":true```.
+
+- POST http://localhost:3000/api/v1/feedbackdata : Envía los datos del questionario a Data Science y devuelve 1 tipo de usuario de dos posibles. 
+
+- DELETE http://localhost:3000/api/v1/deleteone/:id : Borra un questionario mandando por parámetros el ObjectId de Mongo.
 
 ***
 Podéis ver la documentación de las funciones con js-doc en el siguiente enlace:
