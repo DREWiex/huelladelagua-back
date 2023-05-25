@@ -75,11 +75,12 @@ const filteredData = ({ quiz4, quiz9, quiz10, quiz11, quiz14 }) => {
         param6 = 0
     }
 
-    return `http://3.144.111.165/api/k-means/prediction?data=${param1}&data=${param2}&data=${param3}&data=${param4}&data=${param5}&data=${param6}`
+    return `http://3.144.196.76/api/k-means/prediction?data=${param1}&data=${param2}&data=${param3}&data=${param4}&data=${param5}&data=${param6}`
 
 
 }
-
+//http://3.144.111.165/ antigua url
+// http://3.144.196.76/ nueva url
 module.exports = {
     filteredData
 }
