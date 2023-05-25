@@ -153,7 +153,7 @@ const getFeedBack = async (req, res) => {
     const petition = await fetch(url);
     const resp = await petition.json()
 
-    if (resp) {
+    if (resp && (resp == 'saver' || resp == 'spender')) {
 
       res.status(201).json({
         ok: true,
@@ -161,7 +161,7 @@ const getFeedBack = async (req, res) => {
       })
 
     } else {
-
+      console.log('pasopasito')
       res.status(500).json({
         ok: false,
         msg: 'Error al obtener los datos'
